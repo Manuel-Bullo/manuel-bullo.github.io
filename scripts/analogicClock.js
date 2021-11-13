@@ -6,8 +6,10 @@ const container = document.getElementById("container");
 const canvas = document.getElementById("analogicClock");
 const canvasCtx = canvas.getContext("2d");
 
-canvas.width = container.clientWidth;
-canvas.height = container.clientHeight;
+/*canvas.width = container.clientWidth;
+canvas.height = container.clientHeight;*/
+
+resizeContainer();
 
 let deltaTime = 1000;
 let clockModel = new ClockModel({x: canvas.width / 2, y: canvas.height / 2}, getClockRadius());
