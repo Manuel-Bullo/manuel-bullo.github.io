@@ -62,8 +62,15 @@ function getClockRadius() {
 }
 
 function resizeContainer() {
+    if ( navigator.platform != "iPad" && navigator.platform != "iPhone" && navigator.platform != "iPod" ) {
+        container.width = window.outerWidth; 
+    } else {
+        container.width = screen.width;
+    }
+    
     canvas.width = container.clientWidth;
     canvas.height = container.clientHeight;
+
     clockModel.setClockCenter({x: canvas.width / 2, y: canvas.height / 2});
     clockModel.setClockRadius(getClockRadius());
     clockModel.setFontSize(getClockRadius() / 5);
