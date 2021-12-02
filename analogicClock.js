@@ -9,10 +9,10 @@ import ElegantView2 from "./lib/views/ElegantView2.js";
 * マヌエルはバカです
 */
 
-drawClock(new DottedView(), "container1", "analogicClock1", configClock1, fastBackwardsConfig, 1);
+drawClock(new DottedView(), "container1", "analogicClock1", configClock1, defaultConfig, 0);
 drawClock(new ElegantView(), "container2", "analogicClock2", configClock2, defaultConfig, 1);
 drawClock(new ElegantView2(), "container3", "analogicClock3", configClock3, defaultConfig, 9);
-drawClock(new DottedView(), "container4", "analogicClock4", configClock4, fastForwardConfig, 9);
+drawClock(new DottedView(), "container4", "analogicClock4", configClock4, defaultConfig, -5);
 
 function drawClock(clockView, containerId, canvasId, initializeClock, speedConfig, utc) {
     const container = document.getElementById(containerId);
